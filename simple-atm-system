@@ -1,0 +1,33 @@
+balance = 5000
+print("===== ATM SYSTEM =====")
+print("1. Check Balance")
+print("2. Deposit Money")
+print("3. Withdraw Money")
+choice = input("Enter your choice: ")
+if choice == "1":
+    print("Your balance is:", balance)
+elif choice == "2":
+    amount = int(input("Enter deposit amount: "))
+    balance = balance + amount
+    print("Amount deposited successfully!")
+    print("New balance:", balance)
+elif choice == "3":
+    amount = int(input("Enter withdrawal amount: "))
+    if amount <= balance:
+        balance = balance - amount
+        print("Please collect your cash.")
+        print("Remaining balance:", balance)
+    else:
+        print("Insufficient balance.")
+else:
+    print("Invalid choice.")
+
+OUTPUT:
+===== ATM SYSTEM =====
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+Enter your choice: 3
+Enter withdrawal amount: 2000
+Please collect your cash.
+Remaining balance: 3000
